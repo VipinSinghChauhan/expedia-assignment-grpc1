@@ -4,8 +4,6 @@ import com.expedia.calculator.client.CalculatorClient
 import io.grpc.ManagedChannel
 import io.grpc.ManagedChannelBuilder
 
-class ClientProgram()
-
 fun main() {
     val channel: ManagedChannel = ManagedChannelBuilder.forTarget("localhost:50051")
         .usePlaintext().build();
