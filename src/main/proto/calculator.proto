@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package com.expedia.stubs.calculator;
+
+option java_package = "com.expedia.stubs.calculator";
+option java_multiple_files = true;
+
+service CalculatorService{
+  rpc add(Request) returns (Response);
+  rpc subtract(Request) returns (Response);
+  rpc multiply(Request) returns (Response);
+  rpc divide(Request) returns (Response);
+}
+
+message Request{
+  int32 num1 = 1;
+  int32 num2 = 2;
+}
+message Response{
+  int32 result = 1;
+}
